@@ -1,11 +1,11 @@
 require 'rspec'
 require 'recipe_converter'
 
-describe 'RecipeConverter' do
-  it "Prints an array of ingredients in the recipe" do
-    ingredients = RecipeConverter.new([:sugar => 45, :salt => 60])
+describe RecipeConverter do
+  it "Converts grams to tablespoons" do
+    ingredients = RecipeConverter.new([{"salt" => 30}, {"sugar" => 15}])
 
-    expect(ingredients.to_tablespoons).to eq ([:sugar => 45, :salt => 60])
-
+    expect(ingredients.to_tablespoons).to eq ([{"salt" => 2}, {"sugar" => 1}])
   end
 end
+

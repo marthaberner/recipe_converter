@@ -7,5 +7,11 @@ describe RecipeConverter do
 
     expect(ingredients.to_tablespoons).to eq ([{"salt" => 2}, {"sugar" => 1}])
   end
+  it "Converts grams to cups" do
+    ingredients = RecipeConverter.new([{"salt" => 240}, {"sugar" => 480}])
+
+    expect(ingredients.to_cups).to eq ([{"salt" => 1}, {"sugar" => 2 }])
+  end
+
 end
 

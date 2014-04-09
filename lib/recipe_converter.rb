@@ -4,9 +4,17 @@ class RecipeConverter
   end
 
   def to_tablespoons
+    convert(15)
+  end
+
+  def to_cups
+   convert(240)
+  end
+
+  def convert(x)
     @ingredients.collect do |item|
       item.collect do |key, value|
-        {key => value/15}
+        {key => value/x}
       end
     end.flatten
   end

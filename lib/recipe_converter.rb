@@ -11,6 +11,7 @@ class RecipeConverter
    convert(240)
   end
 
+    private 
   def convert(x)
     @ingredients.collect do |item|
       item.collect do |key, value|

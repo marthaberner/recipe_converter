@@ -12,6 +12,5 @@ describe RecipeConverter do
 
     expect(ingredients.to_cups).to eq ([{"salt" => 1}, {"sugar" => 2 }])
   end
-
 end
 
